@@ -1,3 +1,5 @@
+import classes from "./SavingsForm.module.css"
+
 export default function SavingsForm(props) {
 
 
@@ -24,8 +26,8 @@ export default function SavingsForm(props) {
     }
 
     return (
-        <form onSubmit={onSubmit} className="form">
-            <div className="input-group">
+        <form onSubmit={onSubmit} className={classes.form}>
+            <div className={classes.inputGroup}>
                 <p>
                     <label htmlFor="current-savings">Current Savings ($)</label>
                     <input
@@ -45,7 +47,7 @@ export default function SavingsForm(props) {
                         id="yearly-contribution"/>
                 </p>
             </div>
-            <div className="input-group">
+            <div className={classes.inputGroup}>
                 <p>
                     <label htmlFor="expected-return">
                         Expected Interest (%, per year)
@@ -67,7 +69,7 @@ export default function SavingsForm(props) {
                         id="duration"/>
                 </p>
             </div>
-            <p className="actions">
+            <p className={classes.actions}>
                 <button onClick={onReset} type="reset" className="buttonAlt">
                     Reset
                 </button>

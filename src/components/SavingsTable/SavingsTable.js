@@ -1,12 +1,9 @@
-const formatter = new Intl.NumberFormat('de-DE', {
-    style: 'currency',
-    currency: 'EUR',
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-})
+import classes from "./SavingsTable.module.css"
+import {formatter} from "../../util/util"
 
 export default function SavingsTable(props) {
-    return (<table className="result">
+    return (
+        <table className={classes.savingsTable}>
             <thead>
             <tr>
                 <th>Year</th>
